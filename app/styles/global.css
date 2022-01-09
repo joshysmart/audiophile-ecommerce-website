@@ -2845,7 +2845,7 @@ input::-webkit-inner-spin-button {
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* position: relative; */
+  position: relative;
   padding: 24px 0 0 0;
 }
 
@@ -3153,6 +3153,7 @@ input::-webkit-inner-spin-button {
 }
 
 .container .checkout-page .checkout-form .form {
+  width: 100%;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -3161,7 +3162,6 @@ input::-webkit-inner-spin-button {
 
 @media only screen and (min-width: 1280px) {
   .container .checkout-page .checkout-form .form {
-    width: 100%;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
