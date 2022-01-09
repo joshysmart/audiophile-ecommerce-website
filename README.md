@@ -38,7 +38,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./public/assets/screenshot/Screenshot-Desktop.jpg)
+![alt](/../main/public/assets/screenshot/Screenshot-Desktop.jpg)
 
 ### Links
 
