@@ -42,8 +42,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/fullstack-audiophile-ecommerce-website-built-using-remix-DTB995L48)
-- Live Site URL: [Add live site URL here](https://audiophile-ecommerce-website-self.vercel.app/)
+- [Solution URL](https://www.frontendmentor.io/solutions/fullstack-audiophile-ecommerce-website-built-using-remix-DTB995L48)
+- [Live Site URL](https://audiophile-ecommerce-website-self.vercel.app/)
 
 ## My process
 
