@@ -32,7 +32,7 @@ export const action = async ({request, params}) => {
           }
         }
       })
-      return redirect("")
+      return redirect(request.url)
     }
     default: {
       const data = {
@@ -46,24 +46,27 @@ export const action = async ({request, params}) => {
         })
       }
       
-      try {
-        const cartItem = await db.cartItem.create({
-          data: {
-            quantity,
-            userId: user.id,
-            product: {
-              id: data.products[0].id,
-              name: data.products[0].name,
-              shortName: data.products[0].shortName,
-              slug: data.products[0].slug,
-              price: data.products[0].price * quantity
+      if (user) {
+        try {
+          const cartItem = await db.cartItem.create({
+            data: {
+              quantity,
+              userId: user.id,
+              product: {
+                id: data.products[0].id,
+                name: data.products[0].name,
+                shortName: data.products[0].shortName,
+                slug: data.products[0].slug,
+                price: data.products[0].price * quantity
+              }
             }
-          }
-        })    
-      } catch (error) {
-        console.log(error)
+          })    
+        } catch (error) {
+          console.log(error)
+        }
+        return redirect(request.url)
       }
-      return redirect("")
+      return redirect("/auth/login")
     }
   }
 }
@@ -102,9 +105,9 @@ function Product() {
           <div className="prod-quantity">
             <form method="POST" target="_self">
               <label htmlFor="quantity">
-                <span className="operator minus" data-operator="minus">-</span>
-                <input type="number" name="quantity" id="quantity" defaultValue={1} min="1" required/>
                 <span className="operator plus" data-operator="plus">+</span>
+                <input type="number" name="quantity" id="quantity" defaultValue={1} min="1" required/>
+                <span className="operator minus" data-operator="minus">-</span>
               </label>
               <button type="submit">ADD TO CART</button>
             </form>

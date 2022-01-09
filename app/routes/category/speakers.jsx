@@ -16,10 +16,10 @@ export const action = async ({request, params}) => {
           }
         }
       })
-      return redirect("")
+      return redirect(request.url)
     }
     default: {
-      return redirect("")    
+      return redirect(request.url)
     }
   }
 }

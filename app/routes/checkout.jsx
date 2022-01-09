@@ -12,7 +12,6 @@ export const action = async ({request, params}) => {
   switch (action) {
     case "UPDATE_CART": {
       for (let [key, val] of formData.entries()) {
-        console.log(key,val)
         if (key !== "_action") {
           const prevData = await db.cartItem.findMany({
             select: {product: true, quantity: true},
@@ -48,7 +47,9 @@ export const action = async ({request, params}) => {
     }
     case "HANDLE_PAYMENT": {
       const submitted = true
-      return {submitted}    
+
+      console.log(formData)
+      return {submitted}
     }
     default: {
       return redirect("/checkout")    
@@ -120,7 +121,7 @@ function Checkout() {
   }
 
   return (
-    <div className={`checkout-page ${actionData?.submitted ? "open-overlay" : ""}`} >
+    <div className={`checkout-page ${actionData?.submitted ? "open-checkout-overlay" : ""}`} >
       <div className="back-btn">
         <button onClick={handleClick}>Go back</button>
       </div>
@@ -149,9 +150,11 @@ function Checkout() {
                 <p className="grand-price">$ {grandTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
               </div>
             </div>
-            <Link to={"/"}>
-              <button className="to-home">BACK TO HOME</button>
-            </Link>
+            {/* <Link to={"/ordered"}> */}
+              <form action="/ordered" target="_self">
+                <button className="to-home">BACK TO HOME</button>
+              </form>
+            {/* </Link> */}
           </div>
         </div>
 
