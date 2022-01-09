@@ -886,6 +886,7 @@ input::-webkit-inner-spin-button {
   letter-spacing: 1.07143px;
   text-transform: uppercase;
   margin: 0 0 15px 0;
+  opacity: 1;
 }
 
 @media only screen and (min-width: 1280px) {
