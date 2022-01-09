@@ -357,7 +357,7 @@ button {
   padding: 0 1.5rem;
   position: absolute;
   margin: 100px 0;
-  /* z-index: 3; */
+  z-index: 1;
   transform: translate(-1500px);
 }
 
