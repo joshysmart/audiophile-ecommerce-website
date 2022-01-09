@@ -1,0 +1,3816 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  background: #fafafa;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+p {
+  opacity: 0.5;
+}
+
+button {
+  border-radius: 0px;
+  font-family: Manrope;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}
+
+.header {
+  width: 100%;
+  background: #191919;
+  padding: 1.5rem;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    padding: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .header {
+    padding: 32px 165px 36px 165px;
+  }
+}
+
+.header .navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .header .navbar {
+    justify-content: flex-start;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .header .navbar {
+    justify-content: space-between;
+  }
+}
+
+.header .navbar::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  bottom: -1rem;
+  background: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.1;
+}
+
+@media only screen and (min-width: 1280px) {
+  .header .navbar::after {
+    bottom: -2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header .navbar .logo {
+    margin: 5px auto 0 42px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .header .navbar .logo {
+    margin: 0;
+  }
+}
+
+.header .navbar .logo img {
+  width: 143px;
+  height: 25px;
+}
+
+.header .navbar ul {
+  width: 100%;
+  margin: 80px 0 0 0;
+  padding: 0 0 1.5rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-radius: 0px 0px 8px 8px;
+  transform: translate(-1500px);
+}
+
+.header .navbar .nav-open {
+  transform: translate(0);
+}
+
+@media only screen and (min-width: 768px) {
+  .header .navbar ul {
+    padding: 0 0 2.5rem 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .header .navbar ul {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    transform: translate(0);
+    position: static;
+    margin: 0;
+    padding: 0;
+    background: 0;
+  }
+}
+
+.header .navbar ul li {
+  list-style-type: none;
+  display: none;
+}
+
+@media only screen and (min-width: 1280px) {
+  .header .navbar ul li {
+    display: block;
+    text-transform: uppercase;
+  }
+}
+
+.header .navbar .menu {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1280px) {
+  .header .navbar .menu {
+    display: none;
+  }
+}
+
+.header .navbar .menu .burger {
+  width: 16px;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+}
+
+.header .navbar .menu .burger::before {
+  width: 16px;
+  height: 3px;
+  background: #fff;
+  content: "";
+  top: -6px;
+  position: absolute;
+}
+
+.header .navbar .menu .burger::after {
+  width: 16px;
+  height: 3px;
+  background: #fff;
+  content: "";
+  top: 6px;
+  position: absolute;
+}
+
+/* .header .navbar .logo .logo-menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+
+.header .navbar .nav-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0 0 0;
+}
+
+@media only screen and (min-width: 1280px) {
+  .header .navbar .nav-icons {
+    margin: 0;
+  }
+}
+
+.header .navbar .nav-icons .fas {
+  color: #000;
+}
+
+@media only screen and (min-width: 1280px) {
+  .header .navbar .nav-icons .fas {
+    color: #fff;
+  }
+}
+
+.header .navbar button {
+  background: 0;
+  border: 0;
+  outline: 0;
+}
+
+@media only screen and (min-width: 1280px) {
+  .header .navbar button {
+    color: #fff;
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.open-overlay::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* top: 0; */
+  /* bottom: 0; */
+  left: 0;
+  right: 0;
+  content: "";
+  background: #000;
+  background: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  z-index: 1;
+  transition: all 0.4s ease-in;
+}
+
+.container-open::before {
+  content: "";
+}
+
+.container .login-register {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 150px 0 100px 0;
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .login-register {
+    margin: 176px 0 100px 0;
+  }
+}
+
+.container .login-register .login-form {
+  min-width: 350px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  color: #000;
+}
+
+.container .login-register .login-form input {
+  width: 100%;
+  height: 56px;
+  padding: 0 2rem;
+  background: #ffffff;
+  border: 1px solid #cfcfcf;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.25px;
+  margin: 0 0 24px 0;
+  /* opacity: 0.5; */
+  outline: 0;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+}
+
+.container .login-register .login-form input:focus {
+  border: 1px solid #d87d4a;
+}
+
+.container .login-register .login-form .error {
+  position: relative;
+}
+
+.container .login-register .login-form .error p {
+  width: 100%;
+  color: #d87d4a;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  letter-spacing: -0.214286px;
+  position: absolute;
+  top: -2rem;
+  /* margin: 0; */
+}
+
+.container .login-register .login-form .login-btn {
+  width: 100%;
+  height: 48px;
+  color: #fff;
+  background: #d87d4a;
+}
+
+.container .login-register .login-form a {
+  color: #d87d4a;
+  font-weight: bold;
+}
+
+.container .login-register .login-form .register p {
+  margin: 16px 0 0 0;
+}
+
+.container .cart {
+  width: 100%;
+  padding: 0 1.5rem;
+  position: absolute;
+  margin: 100px 0;
+  z-index: 3;
+  transform: translate(-1500px);
+}
+
+.container .cart-open {
+  transform: translate(0);
+}
+
+@media only screen and (min-width: 768px) {
+  .container .cart {
+    width: 377px;
+    padding: 0;
+    right: 2.5rem;
+    margin: 115px 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .cart {
+    right: 165px;
+    margin: 125px 0;
+  }
+}
+
+.container .cart .mask {
+  width: 100%;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 1.5rem 1.5rem;
+  /* z-index: 2; */
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .cart .mask {
+    padding: 2rem;
+  }
+}
+
+.container .cart .mask .cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .cart .mask .cart-header p {
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 1;
+  margin: 0;
+}
+
+.container .cart .mask .cart-header .remove {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  text-decoration-line: underline;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  background: 0;
+  border: 0;
+  outline: 0;
+  text-transform: none;
+}
+
+.container .cart .mask .products .product {
+  display: flex;
+  align-items: center;
+  margin: 24px 0 0 0;
+}
+
+.container .cart .mask .products .product .image {
+  height: 64px;
+}
+
+.container .cart .mask .products .product .image img {
+  height: 64px;
+  width: 64px;
+}
+
+.container .cart .mask .products .product .name-price {
+  margin: 0 auto 0 16px;
+}
+
+.container .cart .mask .products .product .name-price .name {
+  color: #000000;
+  opacity: 1;
+  margin: 0;
+}
+
+.container .cart .mask .products .product .name-price .price {
+  font-size: 14px;
+  color: #000000;
+  margin: 0;
+}
+
+.container .cart .mask .products .product .quantity label {
+  position: relative;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000000;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+}
+
+.container .cart .mask .products .product .quantity label .operator {
+  position: absolute;
+  opacity: 0.25;
+  cursor: pointer;
+}
+
+.container .cart .mask .products .product .quantity label .minus {
+  top: 0;
+  left: 15px;
+  content: "-";
+}
+
+.container .cart .mask .products .product .quantity label .plus {
+  content: "+";
+  top: 0;
+  right: 15px;
+}
+
+.container
+  .cart
+  .mask
+  .products
+  .product
+  .quantity
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.container .cart .mask .products .product .quantity input[type="number"] {
+  -moz-appearance: textfield;
+  height: 32px;
+  width: 96px;
+  text-align: center;
+  background: #f1f1f1;
+  border: 0;
+  outline: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000000;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+}
+
+.container .cart .mask .products .total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 32px 0 0 0;
+}
+
+.container .cart .mask .products .total .total-text p {
+  color: #000000;
+  margin: 0;
+}
+
+.container .cart .mask .products .total .total-price p {
+  font-size: 18px;
+  color: #000000;
+  opacity: 1;
+  margin: 0;
+}
+
+.container .cart .mask .products .submit .checkout {
+  width: 100%;
+  height: 48px;
+  color: #ffffff;
+  background: #d87d4a;
+  margin: 24px 0 0 0;
+}
+
+.container .home .hero {
+  background: #191919;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .home .hero {
+    background: #191919;
+  }
+}
+
+.container .home .hero .mask {
+  background: #191919;
+  width: 100%;
+  height: 600px;
+  background-image: url("/assets/home/mobile/image-header.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .home .hero .mask {
+    height: 729px;
+    background-image: url("/assets/home/tablet/image-header.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .home .hero .mask {
+    height: 729px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding: 0 165px;
+    background-image: url("/assets/home/desktop/image-hero.jpg");
+  }
+}
+
+.container .home .hero .mask .description {
+  width: 100%;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 -95px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .home .hero .mask .description {
+    height: 346px;
+    width: 379px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .home .hero .mask .description {
+    width: 398px;
+    height: 346px;
+    align-items: start;
+  }
+}
+
+.container .home .hero .mask .description .title {
+  margin: 0;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .home .hero .mask .description .title {
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 10px;
+    text-align: left;
+  }
+}
+
+.container .home .hero .mask .description .product-name {
+  margin: 0;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .home .hero .mask .description .product-name {
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: 2px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .home .hero .mask .description .product-name {
+    text-align: left;
+  }
+}
+
+.container .home .hero .mask .description .product-desc {
+  margin: 0;
+  text-align: center;
+  opacity: 0.75;
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .home .hero .mask .description .product-desc {
+    text-align: left;
+  }
+}
+
+.container .home .hero .mask .description .see-product {
+  height: 48px;
+  width: 160px;
+  color: #fff;
+  background: #d87d4a;
+}
+
+.header .navbar ul .products-sold,
+.container .products-sold {
+  width: 100%;
+  /* height: 683px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem 100px 1.5rem;
+  color: #000;
+}
+
+@media only screen and (min-width: 768px) {
+  .header .navbar ul .products-sold,
+  .container .products-sold {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2.5rem 120px 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .header .navbar ul .products-sold,
+  .container .products-sold {
+    padding: 0 165px 160px 165px;
+  }
+}
+
+.header .navbar ul .products-sold {
+  padding: 32px 1.5rem 0 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .header .navbar ul .products-sold {
+    padding: 56px 2.5rem 0 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .header .navbar ul .products-sold {
+    padding: 120px 165px 168px 165px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .header .navbar ul .product-menu {
+    display: none;
+  }
+}
+
+.container .home .products-sold {
+  padding: 40px 1.5rem 0 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .home .products-sold {
+    padding: 96px 2.5rem 0 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .home .products-sold {
+    padding: 120px 165px 0 165px;
+  }
+}
+
+.container .products-sold .product,
+.header .navbar ul .products-sold .product {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .products-sold .product,
+  .header .navbar ul .products-sold .product {
+    width: 223px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .products-sold .product,
+  .header .navbar ul .products-sold .product {
+    width: 300px;
+    height: 245px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container .products-sold .product,
+  .header .navbar ul .products-sold .product {
+    width: 350px;
+  }
+}
+
+.container .products-sold .speakers,
+.header .navbar ul .products-sold .speakers {
+  margin: 60px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .products-sold .speakers,
+  .header .navbar ul .products-sold .speakers {
+    margin: 0;
+  }
+}
+
+.header .navbar ul .products-sold .mask,
+.container .products-sold .mask {
+  width: 100%;
+  height: 165px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f1f1f1;
+}
+
+@media only screen and (min-width: 768px) {
+  .header .navbar ul .products-sold .mask,
+  .container .products-sold .mask {
+    width: 223px;
+    height: 165px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .header .navbar ul .products-sold .mask,
+  .container .products-sold .mask {
+    height: 180px;
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .header .navbar ul .products-sold .mask,
+  .container .products-sold .mask {
+    height: 204px;
+    width: 350px;
+  }
+}
+
+.header .navbar ul .products-sold .headphones .image,
+.container .products-sold .headphones .image {
+  width: 104px;
+  height: 104px;
+  margin: -85px 0 0 0;
+}
+
+@media only screen and (min-width: 1280px) {
+  .header .navbar ul .products-sold .headphones .image,
+  .container .products-sold .headphones .image {
+    height: 160px;
+    width: 150px;
+    margin: -95px 0 0 0;
+  }
+}
+
+.header .navbar ul .products-sold .earphones .image,
+.container .products-sold .earphones .image {
+  width: 135px;
+  height: 120px;
+  margin: -60px 0 0 0;
+}
+
+@media only screen and (min-width: 1280px) {
+  .header .navbar ul .products-sold .earphones .image,
+  .container .products-sold .earphones .image {
+    height: 126px;
+    width: 126px;
+    margin: -70px 0 0 0;
+  }
+}
+
+.header .navbar ul .products-sold .speakers .image,
+.container .products-sold .speakers .image {
+  width: 120px;
+  height: 120px;
+  margin: -80px 0 0 0;
+}
+
+@media only screen and (min-width: 1280px) {
+  .header .navbar ul .products-sold .speakers .image,
+  .container .products-sold .speakers .image {
+    height: 146px;
+    width: 146px;
+    margin: -90px 0 0 0;
+  }
+}
+
+.header .navbar ul .products-sold .mask img,
+.container .products-sold .mask img {
+  width: 100%;
+  height: 100%;
+}
+
+.header .navbar ul .products-sold .mask span img,
+.container .products-sold .mask span img {
+  width: 5px;
+  height: 10px;
+}
+
+.header .navbar ul .products-sold .mask .product-name,
+.container .products-sold .mask .product-name {
+  font-weight: bold;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 1.07143px;
+  text-transform: uppercase;
+  margin: 0 0 15px 0;
+}
+
+@media only screen and (min-width: 1280px) {
+  .header .navbar ul .products-sold .mask .product-name,
+  .container .products-sold .mask .product-name {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 1.28571px;
+  }
+}
+
+.header .navbar ul .products-sold .mask .shop,
+.container .products-sold .mask .shop {
+  width: 50px;
+  margin: 0;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #000000;
+  opacity: 0.5;
+}
+
+/* .container .login {
+  position: relative;
+} */
+.container .product-sold {
+  padding: 100px 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-sold {
+    padding: 96px 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-sold {
+    padding: 168px 165px 200px 165px;
+  }
+}
+
+.container .product-sold .mask {
+  background: #d87d4a;
+  border-radius: 8px;
+}
+
+.container .product-sold .zx9-speaker {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  border-radius: 8px;
+  padding: 0 1.5rem;
+  background-image: url("/assets/home/desktop/pattern-circles.svg");
+  background-size: 170%;
+  background-position: -114px -120px;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-sold .zx9-speaker {
+    height: 720px;
+    background-size: 120%;
+    background-position: -62px -268px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-sold .zx9-speaker {
+    height: 460px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 50px 0 75px;
+    background-size: 65%;
+    background-position: -210px -162px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container .product-sold .zx9-speaker {
+    height: 560px;
+    padding: 0 95px 0 115px;
+    background-size: 85%;
+    background-position: -155px -60px;
+  }
+}
+
+.container .product-sold .zx9-speaker .image {
+  width: 172px;
+  height: 207px;
+  background-image: url("/assets/home/mobile/image-speaker-zx9.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: -15px 0 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-sold .zx9-speaker .image {
+    height: 237px;
+    width: 197px;
+    background-image: url("/assets/home/tablet/image-speaker-zx9.png");
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-sold .zx9-speaker .image {
+    height: 423px;
+    width: 340px;
+    align-self: flex-end;
+    margin: 0;
+    background-image: url("/assets/home/desktop/image-speaker-zx9.png");
+    background-position: 0 20px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container .product-sold .zx9-speaker .image {
+    height: 493px;
+    width: 410px;
+    background-position: 0 10px;
+  }
+}
+
+.container .product-sold .zx9-speaker .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: -20px 0 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-sold .zx9-speaker .description {
+    height: 303px;
+    width: 349px;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-sold .zx9-speaker .description {
+    align-items: flex-start;
+  }
+}
+
+.container .product-sold .zx9-speaker .description .product-name {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0 1.5rem;
+  color: #fff;
+  opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-sold .zx9-speaker .description .product-name {
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: 2px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-sold .zx9-speaker .description .product-name {
+    text-align: left;
+    padding: 0;
+  }
+}
+
+.container .product-sold .zx9-speaker .description .product-desc {
+  text-align: center;
+  opacity: 0.75;
+  margin: 20px 0;
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-sold .zx9-speaker .description .product-desc {
+    text-align: left;
+  }
+}
+
+.container .product-sold .zx9-speaker .description .see-product {
+  height: 48px;
+  width: 160px;
+  color: #fff;
+  background: #000000;
+}
+
+.container .product-sold .zx7-speaker {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1.5rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+  background-image: url("/assets/home/mobile/image-speaker-zx7.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-sold .zx7-speaker {
+    height: 320px;
+    width: 100%;
+    background-image: url("/assets/home/tablet/image-speaker-zx7.jpg");
+    padding: 0 62px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-sold .zx7-speaker {
+    padding: 0 95px;
+    margin: 3rem 0;
+    background-image: url("/assets/home/desktop/image-speaker-zx7.jpg");
+  }
+}
+
+.container .product-sold .zx7-speaker .description .product-name {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 1;
+}
+
+.container .product-sold .zx7-speaker .description .see-product {
+  height: 48px;
+  width: 160px;
+  border: 1px solid #000000;
+  color: #000000;
+}
+
+.container .product-sold .yx1-earphone {
+  width: 100%;
+  height: 424px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-sold .yx1-earphone {
+    height: 320px;
+    width: 100%;
+    flex-direction: row-reverse;
+  }
+}
+
+.container .product-sold .yx1-earphone .image {
+  width: 100%;
+  height: 200px;
+  background-image: url("/assets/home/mobile/image-earphones-yx1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-sold .yx1-earphone .image {
+    height: 320px;
+    width: calc(50% - 11px);
+    background-image: url("/assets/home/tablet/image-earphones-yx1.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-sold .yx1-earphone .image {
+    width: calc(50% - 30px);
+    background-image: url("/assets/home/desktop/image-earphones-yx1.jpg");
+  }
+}
+
+.container .product-sold .yx1-earphone .description {
+  width: 100%;
+  height: 200px;
+  background: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 1.5rem;
+  border-radius: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-sold .yx1-earphone .description {
+    height: 320px;
+    width: calc(50% - 11px);
+    padding: 0 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-sold .yx1-earphone .description {
+    width: calc(50% - 30px);
+    padding: 0 95px;
+  }
+}
+
+.container .product-sold .yx1-earphone .description .product-name {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0 0 28px 0;
+  opacity: 1;
+}
+
+.container .product-sold .yx1-earphone .description .see-product {
+  height: 48px;
+  width: 160px;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+.container .audiophile-ecommerce {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem 100px 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .audiophile-ecommerce {
+    padding: 0 2.5rem 96px 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .audiophile-ecommerce {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 165px 160px 165px;
+  }
+}
+
+.container .audiophile-ecommerce .image {
+  width: 100%;
+  height: 300px;
+  background-image: url("/assets/shared/mobile/image-best-gear.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .audiophile-ecommerce .image {
+    background-image: url("/assets/shared/tablet/image-best-gear.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .audiophile-ecommerce .image {
+    width: 500px;
+    height: 555px;
+    background-image: url("/assets/shared/desktop/image-best-gear.jpg");
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container .audiophile-ecommerce .image {
+    width: 540px;
+    height: 588px;
+    background-image: url("/assets/shared/desktop/image-best-gear.jpg");
+  }
+}
+
+.container .audiophile-ecommerce .image img {
+  width: 100%;
+  height: 300px;
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .audiophile-ecommerce .image img {
+    height: 555px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container .audiophile-ecommerce .image img {
+    height: 588px;
+  }
+}
+
+.container .audiophile-ecommerce .description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .audiophile-ecommerce .description {
+    width: 573px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .audiophile-ecommerce .description {
+    height: 265px;
+    width: 400px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container .audiophile-ecommerce .description {
+    height: 295px;
+    width: 445px;
+  }
+}
+
+.container .audiophile-ecommerce .description .title {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 2rem 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .audiophile-ecommerce .description .title {
+    font-size: 40px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: 1.4px;
+    margin: 63px 0 2rem 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .audiophile-ecommerce .description .title {
+    margin: 0 0 32px 0;
+    text-align: left;
+  }
+}
+
+.container .audiophile-ecommerce .description span {
+  color: #d87d4a;
+}
+
+.container .audiophile-ecommerce .description .desc {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
+  opacity: 0.5;
+  margin: 0;
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .audiophile-ecommerce .description .desc {
+    text-align: left;
+  }
+}
+
+.container .category .hero {
+  width: 100%;
+  height: 192px;
+  background: #191919;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2rem 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .category .hero {
+    height: 336px;
+    padding: 0 0 97px 0;
+  }
+}
+
+.container .category .hero .mask h1 {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .category .hero .mask h1 {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 1.4px;
+  }
+}
+
+.container .category .products {
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    "product-zero"
+    "product-one"
+    "product-two";
+  padding: 60px 1.5rem 100px 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .category .products {
+    padding: 120px 2.5rem 120px 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .category .products {
+    padding: 160px 165px 160px 165px;
+  }
+}
+
+.container .category .products .product {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .category .products .product {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.container .category .products .product-0 {
+  grid-area: product-zero;
+}
+
+.container .category .products .product-2 {
+  grid-area: product-one;
+  padding: 100px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .category .products .product-2 {
+    padding: 120px 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .category .products .product-2 {
+    padding: 160px 0;
+    flex-direction: row-reverse;
+  }
+}
+
+.container .category .products .product-1 {
+  grid-area: product-two;
+}
+
+.container .category .earphones .product-0 {
+  padding: 0 0;
+}
+
+.container .category .speakers .product-0 {
+  grid-area: product-zero;
+}
+
+.container .category .speakers .product-1 {
+  grid-area: product-one;
+  padding: 100px 0 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .category .speakers .product-1 {
+    padding: 120px 0 0 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .category .speakers .product-1 {
+    padding: 160px 0 0 0;
+    flex-direction: row-reverse;
+  }
+}
+
+.container .category .products .product .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+@media only screen and (min-width: 768px) {
+  .container .category .products .product .description {
+    width: 570px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .category .products .product .description {
+    width: 395px;
+    height: 343px;
+    align-items: flex-start;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container .category .products .product .description {
+    width: 445px;
+  }
+}
+
+.container .category .products .product .description .new p {
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: #d87d4a;
+  margin: 25px 0 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .category .products .product .description .new p {
+    margin: 0 0 16px 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .category .products .product .description .new p {
+    text-align: left;
+  }
+}
+
+.container .category .products .product .description .product-name {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 20px 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .category .products .product .description .product-name {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 1.42857px;
+    margin: 0 85px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .category .products .product .description .product-name {
+    text-align: left;
+    margin: 0;
+  }
+}
+
+.container .category .products .product .description .product-desc {
+  color: #000000;
+  text-align: center;
+  margin: 0 0 24px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .category .products .product .description .product-desc {
+    margin: 32px 0 24px 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .category .products .product .description .product-desc {
+    text-align: left;
+  }
+}
+
+.container .category .products .product .description .see-product {
+  height: 48px;
+  width: 160px;
+  color: #ffffff;
+  background: #d87d4a;
+}
+
+.container .category .products .product .image {
+  width: 100%;
+  height: 352px;
+  border-radius: 8px;
+  background-size: contain;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .category .products .product .image {
+    margin: 0 0 52px 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .category .products .product .image {
+    height: 500px;
+    width: 490px;
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container .category .products .product .image {
+    height: 560px;
+    width: 540px;
+  }
+}
+
+.container .category .products .product .image-xx99-mark-one-headphones {
+  background-image: url("/assets/category-headphones/mobile/image-xx99-mark-one.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .category .products .product .image-xx99-mark-one-headphones {
+    background-image: url("/assets/category-headphones/tablet/image-xx99-mark-one.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .category .products .product .image-xx99-mark-one-headphones {
+    background-image: url("/assets/category-headphones/desktop/image-xx99-mark-one.jpg");
+  }
+}
+
+.container .category .products .product .image-xx59-headphones {
+  background-image: url("/assets/category-headphones/mobile/image-xx59.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .category .products .product .image-xx59-headphones {
+    background-image: url("/assets/category-headphones/tablet/image-xx59.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .category .products .product .image-xx59-headphones {
+    background-image: url("/assets/category-headphones/desktop/image-xx59.jpg");
+  }
+}
+
+.container .category .products .product .image-xx99-mark-two-headphones {
+  background-image: url("/assets/category-headphones/mobile/image-xx99-mark-two.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .category .products .product .image-xx99-mark-two-headphones {
+    background-image: url("/assets/category-headphones/tablet/image-xx99-mark-two.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .category .products .product .image-xx99-mark-two-headphones {
+    background-image: url("/assets/category-headphones/desktop/image-xx99-mark-two.jpg");
+  }
+}
+
+.container .category .products .product .image-yx1-earphones {
+  background-image: url("/assets/category-earphones/mobile/image-yx1-earphones.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .category .products .product .image-yx1-earphones {
+    background-image: url("/assets/category-earphones/tablet/image-yx1-earphones.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .category .products .product .image-yx1-earphones {
+    background-image: url("/assets/category-earphones/desktop/image-yx1-earphones.jpg");
+  }
+}
+
+.container .category .products .product .image-zx7-speaker {
+  background-image: url("/assets/category-speakers/mobile/image-zx7.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .category .products .product .image-zx7-speaker {
+    background-image: url("/assets/category-speakers/tablet/image-zx7.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .category .products .product .image-zx7-speaker {
+    background-image: url("/assets/category-speakers/desktop/image-zx7.jpg");
+  }
+}
+
+.container .category .products .product .image-zx9-speaker {
+  background-image: url("/assets/category-speakers/mobile/image-zx9.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .category .products .product .image-zx9-speaker {
+    background-image: url("/assets/category-speakers/tablet/image-zx9.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .category .products .product .image-zx9-speaker {
+    background-image: url("/assets/category-speakers/desktop/image-zx9.jpg");
+  }
+}
+
+.container .product-details {
+  padding: 0 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details {
+    padding: 0 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details {
+    padding: 0 165px;
+  }
+}
+
+.container .product-details .back-btn button,
+.container .checkout-page .back-btn button {
+  margin: 100px 0 0 0;
+  background: 0;
+  line-height: 25px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  color: #000000;
+  text-transform: capitalize;
+  padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .back-btn button,
+  .container .checkout-page .back-btn button {
+    margin: 140px 0 0 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .back-btn button,
+  .container .checkout-page .back-btn button {
+    margin: 176px 0 0 0;
+  }
+}
+
+.container .product-details .product {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0 100px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .product {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      "image description"
+      "image description"
+      "image description";
+    padding: 24px 0 120px 0;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .product {
+    padding: 56px 0 160px 0;
+  }
+}
+
+.container .product-details .product .image {
+  width: 327px;
+  height: 327px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .product .image {
+    width: 281px;
+    height: 480px;
+    grid-area: image;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .product .image {
+    height: 510px;
+    width: 490px;
+    border: 8px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container .product-details .product .image {
+    height: 560px;
+    width: 540px;
+  }
+}
+
+.container .product-details .product .image-xx99-mark-two-headphones {
+  background-image: url("/assets/product-xx99-mark-two-headphones/mobile/image-product.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .product .image-xx99-mark-two-headphones {
+    background-image: url("/assets/product-xx99-mark-two-headphones/tablet/image-product.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .product .image-xx99-mark-two-headphones {
+    background-image: url("/assets/product-xx99-mark-two-headphones/desktop/image-product.jpg");
+  }
+}
+
+.container .product-details .product .image-xx99-mark-one-headphones {
+  background-image: url("/assets/product-xx99-mark-one-headphones/mobile/image-product.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .product .image-xx99-mark-one-headphones {
+    background-image: url("/assets/product-xx99-mark-one-headphones/tablet/image-product.jpg");
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .container .product-details .product .image-xx99-mark-one-headphones {
+    background-image: url("/assets/product-xx99-mark-one-headphones/desktop/image-product.jpg");
+  }
+}
+
+.container .product-details .product .image-xx59-headphones {
+  background-image: url("/assets/product-xx59-headphones/mobile/image-product.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .product .image-xx59-headphones {
+    background-image: url("/assets/product-xx59-headphones/tablet/image-product.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .product .image-xx59-headphones {
+    background-image: url("/assets/product-xx59-headphones/desktop/image-product.jpg");
+  }
+}
+
+.container .product-details .product .image-yx1-earphones {
+  background-image: url("/assets/product-yx1-earphones/mobile/image-product.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .product .image-yx1-earphones {
+    background-image: url("/assets/product-yx1-earphones/tablet/image-product.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .product .image-yx1-earphones {
+    background-image: url("/assets/product-yx1-earphones/desktop/image-product.jpg");
+  }
+}
+
+.container .product-details .product .image-zx9-speaker {
+  background-image: url("/assets/product-zx9-speaker/mobile/image-product.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .product .image-zx9-speaker {
+    background-image: url("/assets/product-zx9-speaker/tablet/image-product.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .product .image-zx9-speaker {
+    background-image: url("/assets/product-zx9-speaker/desktop/image-product.jpg");
+  }
+}
+
+.container .product-details .product .image-zx7-speaker {
+  background-image: url("/assets/product-zx7-speaker/mobile/image-product.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .product .image-zx7-speaker {
+    background-image: url("/assets/product-zx7-speaker/tablet/image-product.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .product .image-zx7-speaker {
+    background-image: url("/assets/product-zx7-speaker/desktop/image-product.jpg");
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .product .product-desc {
+    width: 339px;
+    grid-area: description;
+    align-self: center;
+    /* height: 390px; */
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .product .product-desc {
+    width: 405px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container .product-details .product .product-desc {
+    width: 445.5px;
+  }
+}
+
+.container .product-details .product .product-desc .new .orange-text {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: #d87d4a;
+  margin: 20px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .product .product-desc .new .orange-text {
+    margin: 0;
+  }
+}
+
+.container .product-details .product .product-desc .product-name {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .product .product-desc .product-name {
+    margin: 16px 0 32px 0;
+  }
+}
+
+.container .product-details .product .product-desc .product-description {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000000;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .product .product-desc .product-description {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .product .product-desc .price {
+    margin: 32px 0;
+  }
+}
+
+.container .product-details .product .product-desc .price p {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .product .product-desc .price p {
+    margin: 0;
+  }
+}
+
+.container .product-details .product .prod-quantity form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+/* Chrome, Safari, Edge, Opera */
+.container
+  .product-details
+  .product
+  .prod-quantity
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+/* Firefox */
+.container .product-details .product .prod-quantity input[type="number"] {
+  -moz-appearance: textfield;
+  width: 120px;
+  height: 48px;
+  text-align: center;
+  background: #f1f1f1;
+  border: 0;
+  outline: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.container .product-details .product .prod-quantity label {
+  position: relative;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000000;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+}
+
+.container .product-details .product .prod-quantity label .operator {
+  position: absolute;
+  opacity: 0.25;
+  cursor: pointer;
+}
+
+.container .product-details .product .prod-quantity label .plus {
+  content: "+";
+  top: 14px;
+  left: 15px;
+}
+
+.container .product-details .product .prod-quantity label .minus {
+  content: "-";
+  top: 14px;
+  right: 15px;
+}
+
+.container .product-details .product .prod-quantity button {
+  width: 160px;
+  height: 48px;
+  margin: 0 0 0 20px;
+  background: #d87d4a;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.container .product-details .features {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 100px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .features {
+    padding: 0 0 120px 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .features {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 0 160px 0;
+  }
+}
+
+.container .product-details .features .feature {
+  padding: 0 0 88px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .features .feature {
+    padding: 0 0 120px 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .features .feature {
+    padding: 0;
+    width: 585px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container .product-details .features .feature {
+    width: 635px;
+  }
+}
+
+.container .product-details .features .feature h3 {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.857143px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .features .feature h3 {
+    font-size: 32px;
+    letter-spacing: 1.14286px;
+    margin: 0 0 32px 0;
+  }
+}
+
+.container .product-details .features .feature .feature-desc p {
+  white-space: pre-wrap;
+  color: #000000;
+  margin: 15px 0 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .features .content {
+    display: flex;
+    width: 549px;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .features .content {
+    display: block;
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container .product-details .features .content {
+    width: 350px;
+  }
+}
+
+.container .product-details .features .content h3 {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.857143px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0 0 24px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .features .content h3 {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 1.14286px;
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .features .content h3 {
+    margin: 0 0 32px 0;
+  }
+}
+
+.container .product-details .features .content p {
+  color: #000000;
+  margin: 0 0 10px 0;
+}
+
+.container .product-details .features .content p .orange-text {
+  color: #d87d4a;
+  margin: 0 15px 0 0;
+  opacity: 1;
+}
+
+.container .product-details .gallary-grid {
+  padding: 0 0 100px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid {
+    display: grid;
+    justify-content: space-between;
+    grid-template-areas:
+      "image-one image-three"
+      "image-two image-three";
+    padding: 0 0 120px 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid {
+    padding: 0 0 160px 0;
+  }
+}
+
+.container .product-details .gallary-grid .image-one,
+.container .product-details .gallary-grid .image-two {
+  height: 174px;
+  width: 100%;
+  border-radius: 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .image-one,
+  .container .product-details .gallary-grid .image-two {
+    height: 174px;
+    width: 277px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .gallary-grid .image-one,
+  .container .product-details .gallary-grid .image-two {
+    height: 280px;
+    width: 445px;
+  }
+}
+
+.container .product-details .gallary-grid .image-two {
+  margin: 20px 0;
+}
+
+.container .product-details .gallary-grid .image-three {
+  height: 368px;
+  width: 100%;
+  border-radius: 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .image-one {
+    grid-area: image-one;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .image-two {
+    grid-area: image-two;
+    margin: 0;
+    align-self: flex-end;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .image-three {
+    grid-area: image-three;
+    height: 368px;
+    width: 395px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .gallary-grid .image-three {
+    height: 592px;
+    width: 472px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container .product-details .gallary-grid .image-three {
+    width: 635px;
+  }
+}
+
+.container .product-details .gallary-grid .yx1-earphones-one {
+  background-image: url("/assets/product-yx1-earphones/mobile/image-gallery-1.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .yx1-earphones-one {
+    background-image: url("/assets/product-yx1-earphones/tablet/image-gallery-1.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .gallary-grid .yx1-earphones-one {
+    background-image: url("/assets/product-yx1-earphones/desktop/image-gallery-1.jpg");
+  }
+}
+
+.container .product-details .gallary-grid .yx1-earphones-two {
+  background-image: url("/assets/product-yx1-earphones/mobile/image-gallery-2.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .yx1-earphones-two {
+    background-image: url("/assets/product-yx1-earphones/tablet/image-gallery-2.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .gallary-grid .yx1-earphones-two {
+    background-image: url("/assets/product-yx1-earphones/desktop/image-gallery-2.jpg");
+  }
+}
+
+.container .product-details .gallary-grid .yx1-earphones-three {
+  background-image: url("/assets/product-yx1-earphones/mobile/image-gallery-3.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .yx1-earphones-three {
+    background-image: url("/assets/product-yx1-earphones/tablet/image-gallery-3.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .gallary-grid .yx1-earphones-three {
+    background-image: url("/assets/product-yx1-earphones/desktop/image-gallery-3.jpg");
+  }
+}
+
+.container .product-details .gallary-grid .xx99-mark-two-headphones-one {
+  background-image: url("/assets/product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .xx99-mark-two-headphones-one {
+    background-image: url("/assets/product-xx99-mark-two-headphones/tablet/image-gallery-1.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .gallary-grid .xx99-mark-two-headphones-one {
+    background-image: url("/assets/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg");
+  }
+}
+
+.container .product-details .gallary-grid .xx99-mark-two-headphones-two {
+  background-image: url("/assets/product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .xx99-mark-two-headphones-two {
+    background-image: url("/assets/product-xx99-mark-two-headphones/tablet/image-gallery-2.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .gallary-grid .xx99-mark-two-headphones-two {
+    background-image: url("/assets/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg");
+  }
+}
+
+.container .product-details .gallary-grid .xx99-mark-two-headphones-three {
+  background-image: url("/assets/product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .xx99-mark-two-headphones-three {
+    background-image: url("/assets/product-xx99-mark-two-headphones/tablet/image-gallery-3.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .gallary-grid .xx99-mark-two-headphones-three {
+    background-image: url("/assets/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg");
+  }
+}
+
+.container .product-details .gallary-grid .xx99-mark-one-headphones-one {
+  background-image: url("/assets/product-xx99-mark-one-headphones/mobile/image-gallery-1.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .xx99-mark-one-headphones-one {
+    background-image: url("/assets/product-xx99-mark-one-headphones/tablet/image-gallery-1.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .gallary-grid .xx99-mark-one-headphones-one {
+    background-image: url("/assets/product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg");
+  }
+}
+
+.container .product-details .gallary-grid .xx99-mark-one-headphones-two {
+  background-image: url("/assets/product-xx99-mark-one-headphones/mobile/image-gallery-2.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .xx99-mark-one-headphones-two {
+    background-image: url("/assets/product-xx99-mark-one-headphones/tablet/image-gallery-2.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .gallary-grid .xx99-mark-one-headphones-two {
+    background-image: url("/assets/product-xx99-mark-one-headphones/desktop/image-gallery-2.jpg");
+  }
+}
+
+.container .product-details .gallary-grid .xx99-mark-one-headphones-three {
+  background-image: url("/assets/product-xx99-mark-one-headphones/mobile/image-gallery-3.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .xx99-mark-one-headphones-three {
+    background-image: url("/assets/product-xx99-mark-one-headphones/tablet/image-gallery-3.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .gallary-grid .xx99-mark-one-headphones-three {
+    background-image: url("/assets/product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg");
+  }
+}
+
+.container .product-details .gallary-grid .xx59-headphones-one {
+  background-image: url("/assets/product-xx59-headphones/mobile/image-gallery-1.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .xx59-headphones-one {
+    background-image: url("/assets/product-xx59-headphones/tablet/image-gallery-1.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .gallary-grid .xx59-headphones-one {
+    background-image: url("/assets/product-xx59-headphones/desktop/image-gallery-1.jpg");
+  }
+}
+
+.container .product-details .gallary-grid .xx59-headphones-two {
+  background-image: url("/assets/product-xx59-headphones/mobile/image-gallery-2.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .xx59-headphones-two {
+    background-image: url("/assets/product-xx59-headphones/tablet/image-gallery-2.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .gallary-grid .xx59-headphones-two {
+    background-image: url("/assets/product-xx59-headphones/desktop/image-gallery-2.jpg");
+  }
+}
+
+.container .product-details .gallary-grid .xx59-headphones-three {
+  background-image: url("/assets/product-xx59-headphones/mobile/image-gallery-3.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .xx59-headphones-three {
+    background-image: url("/assets/product-xx59-headphones/tablet/image-gallery-3.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .gallary-grid .xx59-headphones-three {
+    background-image: url("/assets/product-xx59-headphones/desktop/image-gallery-3.jpg");
+  }
+}
+
+.container .product-details .gallary-grid .zx9-speaker-one {
+  background-image: url("/assets/product-zx9-speaker/mobile/image-gallery-1.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .zx9-speaker-one {
+    background-image: url("/assets/product-zx9-speaker/tablet/image-gallery-1.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .gallary-grid .zx9-speaker-one {
+    background-image: url("/assets/product-zx9-speaker/desktop/image-gallery-1.jpg");
+  }
+}
+
+.container .product-details .gallary-grid .zx9-speaker-two {
+  background-image: url("/assets/product-zx9-speaker/mobile/image-gallery-2.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .zx9-speaker-two {
+    background-image: url("/assets/product-zx9-speaker/tablet/image-gallery-2.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .gallary-grid .zx9-speaker-two {
+    background-image: url("/assets/product-zx9-speaker/desktop/image-gallery-2.jpg");
+  }
+}
+
+.container .product-details .gallary-grid .zx9-speaker-three {
+  background-image: url("/assets/product-zx9-speaker/mobile/image-gallery-3.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .zx9-speaker-three {
+    background-image: url("/assets/product-zx9-speaker/tablet/image-gallery-3.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .gallary-grid .zx9-speaker-three {
+    background-image: url("/assets/product-zx9-speaker/desktop/image-gallery-3.jpg");
+  }
+}
+
+.container .product-details .gallary-grid .zx7-speaker-one {
+  background-image: url("/assets/product-zx7-speaker/mobile/image-gallery-1.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .zx7-speaker-one {
+    background-image: url("/assets/product-zx7-speaker/tablet/image-gallery-1.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .gallary-grid .zx7-speaker-one {
+    background-image: url("/assets/product-zx7-speaker/desktop/image-gallery-1.jpg");
+  }
+}
+
+.container .product-details .gallary-grid .zx7-speaker-two {
+  background-image: url("/assets/product-zx7-speaker/mobile/image-gallery-2.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .zx7-speaker-two {
+    background-image: url("/assets/product-zx7-speaker/tablet/image-gallery-2.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .gallary-grid .zx7-speaker-two {
+    background-image: url("/assets/product-zx7-speaker/desktop/image-gallery-2.jpg");
+  }
+}
+
+.container .product-details .gallary-grid .zx7-speaker-three {
+  background-image: url("/assets/product-zx7-speaker/mobile/image-gallery-3.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .gallary-grid .zx7-speaker-three {
+    background-image: url("/assets/product-zx7-speaker/tablet/image-gallery-3.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .gallary-grid .zx7-speaker-three {
+    background-image: url("/assets/product-zx7-speaker/desktop/image-gallery-3.jpg");
+  }
+}
+
+.container .product-details .you-may-like h3 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.857143px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+}
+
+.container .product-details .you-may-like .products {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0 0 0;
+  padding: 0 0 100px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .you-may-like .products {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 56px 0 0 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .you-may-like .products {
+    margin: 64px 0 0 0;
+    padding: 0 0 160px 0;
+  }
+}
+
+.container .product-details .you-may-like .products .other-product {
+  width: 327px;
+  height: 265px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .you-may-like .products .other-product {
+    height: 471px;
+    width: 223px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .you-may-like .products .other-product {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container .product-details .you-may-like .products .other-product {
+    width: 350px;
+  }
+}
+
+.container .product-details .you-may-like .products .product-1 {
+  margin: 50px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .you-may-like .products .product-1 {
+    margin: 0;
+  }
+}
+
+.container .product-details .you-may-like .products .image {
+  width: 327px;
+  height: 120px;
+  border-radius: 8px;
+  background: #f1f1f1;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .you-may-like .products .image {
+    height: 318px;
+    width: 223px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .you-may-like .products .image {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container .product-details .you-may-like .products .image {
+    width: 350px;
+  }
+}
+
+.container
+  .product-details
+  .you-may-like
+  .products
+  .image-xx99-mark-one-headphones {
+  background-image: url("/assets/shared/mobile/image-xx99-mark-one-headphones.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container
+    .product-details
+    .you-may-like
+    .products
+    .image-xx99-mark-one-headphones {
+    background-image: url("/assets/shared/tablet/image-xx99-mark-one-headphones.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container
+    .product-details
+    .you-may-like
+    .products
+    .image-xx99-mark-one-headphones {
+    background-image: url("/assets/shared/desktop/image-xx99-mark-one-headphones.jpg");
+  }
+}
+
+.container
+  .product-details
+  .you-may-like
+  .products
+  .image-xx99-mark-two-headphones {
+  background-image: url("/assets/shared/mobile/image-xx99-mark-two-headphones.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container
+    .product-details
+    .you-may-like
+    .products
+    .image-xx99-mark-two-headphones {
+    background-image: url("/assets/shared/tablet/image-xx99-mark-two-headphones.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container
+    .product-details
+    .you-may-like
+    .products
+    .image-xx99-mark-two-headphones {
+    background-image: url("/assets/shared/desktop/image-xx99-mark-two-headphones.jpg");
+  }
+}
+
+.container .product-details .you-may-like .products .image-xx59-headphones {
+  background-image: url("/assets/shared/mobile/image-xx59-headphones.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .you-may-like .products .image-xx59-headphones {
+    background-image: url("/assets/shared/tablet/image-xx59-headphones.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .you-may-like .products .image-xx59-headphones {
+    background-image: url("/assets/shared/desktop/image-xx59-headphones.jpg");
+  }
+}
+
+.container .product-details .you-may-like .products .image-zx9-speaker {
+  background-image: url("/assets/shared/mobile/image-zx9-speaker.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .you-may-like .products .image-zx9-speaker {
+    background-image: url("/assets/shared/tablet/image-zx9-speaker.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .you-may-like .products .image-zx9-speaker {
+    background-image: url("/assets/shared/desktop/image-zx9-speaker.jpg");
+  }
+}
+
+.container .product-details .you-may-like .products .image-zx7-speaker {
+  background-image: url("/assets/shared/mobile/image-zx7-speaker.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+  .container .product-details .you-may-like .products .image-zx7-speaker {
+    background-image: url("/assets/shared/tablet/image-zx7-speaker.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .product-details .you-may-like .products .image-zx7-speaker {
+    background-image: url("/assets/shared/desktop/image-zx7-speaker.jpg");
+  }
+}
+
+.container .product-details .you-may-like .products h4 {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  letter-spacing: 1.71429px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.container .product-details .you-may-like .products button {
+  height: 48px;
+  width: 160px;
+  background: #d87d4a;
+  color: #ffffff;
+}
+
+.container .checkout-page {
+  padding: 0 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .checkout-page {
+    padding: 0 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .checkout-page {
+    padding: 0 165px;
+  }
+}
+
+.container .checkout-page .checkout-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding: 24px 0 0 0;
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .checkout-page .checkout-form {
+    padding: 38px 0 141px 0;
+  }
+}
+
+.container .checkout-page .checkout-form .purchase-modal {
+  position: absolute;
+  width: 100%;
+  margin: 55px 0;
+  z-index: 2;
+  color: #000000;
+  transform: translate(-1500px);
+}
+
+.container .checkout-page .checkout-form .purchase-success {
+  transform: translate(0);
+}
+
+@media only screen and (min-width: 768px) {
+  .container .checkout-page .checkout-form .purchase-modal {
+    width: 540px;
+    margin: 30px 0;
+  }
+}
+
+.container .checkout-page .checkout-form .purchase-modal .success-tick {
+  height: 64px;
+  width: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d87d4a;
+  border-radius: 50%;
+}
+
+.container .checkout-page .checkout-form .purchase-modal .mask {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 8px;
+  background: #ffffff;
+  z-index: 2;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .checkout-page .checkout-form .purchase-modal .mask {
+    padding: 3rem;
+  }
+}
+
+.container .checkout-page .checkout-form .purchase-modal .mask h3 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.857143px;
+  text-transform: uppercase;
+  margin: 24px 0 16px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .checkout-page .checkout-form .purchase-modal .mask h3 {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 1.14286px;
+    margin: 33px 0 24px 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .checkout-page .checkout-form .purchase-modal .mask .confirmation {
+    margin: 0;
+  }
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .purchase-modal
+  .mask
+  .product-ordered {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .container
+    .checkout-page
+    .checkout-form
+    .purchase-modal
+    .mask
+    .product-ordered {
+    flex-direction: row;
+    margin: 33px 0 46px 0;
+  }
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .purchase-modal
+  .mask
+  .product-ordered
+  .products-mask {
+  padding: 24px;
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container
+    .checkout-page
+    .checkout-form
+    .purchase-modal
+    .mask
+    .product-ordered
+    .products-mask {
+    width: 55%;
+    border-radius: 8px 0 0 8px;
+  }
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .purchase-modal
+  .mask
+  .product-ordered
+  .products-mask
+  .products {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .purchase-modal
+  .mask
+  .product-ordered
+  .products-mask
+  .products
+  .image {
+  height: 50px;
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .purchase-modal
+  .mask
+  .product-ordered
+  .products-mask
+  .products
+  .image
+  img {
+  width: 50px;
+  height: 50px;
+}
+
+.container
+  .checkout-pagecheckout-page
+  .checkout-form
+  .purchase-modal
+  .mask
+  .product-ordered
+  .products-mask
+  .products
+  .price-name {
+  margin: 0 auto 0 16px;
+  /* width: 125px; */
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .purchase-modal
+  .mask
+  .product-ordered
+  .products-mask
+  .products
+  .price-name
+  .name {
+  font-weight: bold;
+  opacity: 1;
+  margin: 0;
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .purchase-modal
+  .mask
+  .product-ordered
+  .products-mask
+  .products
+  .price-name
+  .price {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0;
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .purchase-modal
+  .mask
+  .product-ordered
+  .products-mask
+  .others {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.214286px;
+  text-align: center;
+  margin: 24px 0 0 0;
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .purchase-modal
+  .mask
+  .product-ordered
+  .products-mask
+  .products
+  .quantity {
+  font-weight: bold;
+  margin: 0;
+  align-self: start;
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .purchase-modal
+  .mask
+  .product-ordered
+  .products-price {
+  padding: 16px 24px 16px 24px;
+  background: #000000;
+  border-radius: 0 0 8px 8px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container
+    .checkout-page
+    .checkout-form
+    .purchase-modal
+    .mask
+    .product-ordered
+    .products-price {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 8px 8px 0;
+  }
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .purchase-modal
+  .mask
+  .product-ordered
+  .products-price
+  .grand-total {
+  color: #ffffff;
+  margin: 0 0 8px 0;
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .purchase-modal
+  .mask
+  .product-ordered
+  .products-price
+  .grand-price {
+  font-size: 18px;
+  color: #ffffff;
+  margin: 0;
+  opacity: 1;
+}
+
+.container .checkout-page .checkout-form .purchase-modal .mask .to-home {
+  width: 100%;
+  height: 48px;
+  margin: 24px 0 0 0;
+  background: #d87d4a;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .checkout-page .checkout-form .purchase-modal .mask .to-home {
+    margin: 0;
+  }
+}
+
+.container .checkout-page .checkout-form .form {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .checkout-page .checkout-form .form {
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.container .checkout-page .checkout-form .form-mask {
+  background: #ffffff;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .checkout-page .checkout-form .form-mask {
+    padding: 27px 30px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .checkout-page .checkout-form .form-mask {
+    width: 650px;
+    padding: 54px 48px 48px 48px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container .checkout-page .checkout-form .form-mask {
+    width: 730px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .checkout-page .checkout-form .form-mask .billing-details {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* gap: 0 1rem; */
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .checkout-page .checkout-form .form-mask .shipping-info {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* gap: 0 1rem; */
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .checkout-page .checkout-form .form-mask .shipping-info .address {
+    flex: 1 100%;
+    /* flex-grow: 4;÷ */
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .checkout-page .checkout-form .form-mask .payment-details {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.container .checkout-page .checkout-form .form .checkout-header {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 32px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .checkout-page .checkout-form .form .checkout-header {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 1.14286px;
+  }
+}
+
+.container .checkout-page .checkout-form .form .orange-text {
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 0.928571px;
+  text-transform: uppercase;
+  color: #d87d4a;
+  opacity: 1;
+}
+
+.container .checkout-page .checkout-form .form .input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 24px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .checkout-page .checkout-form .form .input-wrapper {
+    width: calc(50% - 0.5rem);
+  }
+}
+
+.container .checkout-page .checkout-form .form label {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.214286px;
+  color: #000000;
+  margin: 0 0 9px 0;
+  cursor: pointer;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+}
+
+.container .checkout-page .checkout-form .form input {
+  height: 56px;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.25px;
+  outline: 0;
+  padding: 0 24px 0 24px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #000000;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+}
+
+.container .checkout-page .checkout-form .form input:focus {
+  border: 1px solid #d87d4a;
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .form
+  .payment
+  .payment-method
+  .method
+  label {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .form
+  .payment
+  .payment-method
+  .method
+  input[type="radio"] {
+  height: 20px;
+  width: 20px;
+  display: none;
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .form
+  .payment
+  .payment-method
+  .method {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 8px;
+  margin: 16px 0;
+  padding: 0 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .checkout-page .checkout-form .form .payment .payment-method {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container
+    .checkout-page
+    .checkout-form
+    .form
+    .payment
+    .payment-method
+    .method {
+    /* width: calc(50% - 0.5rem); */
+    margin: 0 0 16px 0;
+  }
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .form
+  .payment
+  .payment-method
+  .method
+  label
+  .checked {
+  height: 20px;
+  width: 20px;
+  /* position: absolute; */
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 11px 0 0;
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .form
+  .payment
+  .payment-method
+  .method
+  .checked::before {
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .form
+  .payment
+  .payment-method
+  .method
+  label::before {
+  width: 100%;
+  height: 56px;
+  position: absolute;
+  content: "";
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .form
+  .payment
+  .payment-method
+  .method
+  input[type="radio"]:checked
+  + label
+  .checked {
+  border: 1px solid #d87d4a;
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .form
+  .payment
+  .payment-method
+  .method
+  input[type="radio"]:checked
+  + label
+  .checked::before {
+  background: #d87d4a;
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .form
+  .payment
+  .payment-method
+  .method
+  input[type="radio"]:checked
+  + label::before {
+  border: 1px solid #d87d4a;
+}
+
+.container .checkout-page .checkout-form .form .payment-method-mask {
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .checkout-page .checkout-form .form .payment-method-mask {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container
+    .checkout-page
+    .checkout-form
+    .form
+    .payment-method-mask
+    .cash-desc {
+    width: 450px;
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container
+    .checkout-page
+    .checkout-form
+    .form
+    .payment-method-mask
+    .cash-desc {
+    width: 554px;
+  }
+}
+
+.container .checkout-page .checkout-form .form .summary {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 32px 0 100px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .checkout-page .checkout-form .form .summary {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container .checkout-page .checkout-form .form .summary {
+    width: 280px;
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container .checkout-page .checkout-form .form .summary {
+    width: 350px;
+  }
+}
+
+.container .checkout-page .checkout-form .form .summary h3 {
+  font-size: 18px;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+}
+
+.container .checkout-page .checkout-form .form .summary .products {
+  margin: 2rem 0;
+}
+
+.container .checkout-page .checkout-form .form .summary .products .product {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  margin: 24px 0;
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .form
+  .summary
+  .products
+  .product
+  .image {
+  height: 64px;
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .form
+  .summary
+  .products
+  .product
+  .image
+  img {
+  height: 64px;
+  width: 64px;
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .form
+  .summary
+  .products
+  .product
+  .quantity {
+  align-self: start;
+  margin: 10px 0;
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .form
+  .summary
+  .products
+  .product
+  .name-price {
+  margin: 0 auto 0 16px;
+}
+
+.container .checkout-page .checkout-form .form .summary .price-mask {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 8px 0;
+}
+
+.container .checkout-page .checkout-form .form .summary .grand-total {
+  margin: 24px 0 32px 0;
+}
+
+.container .checkout-page .checkout-form .form .summary .price-mask p {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.container .checkout-page .checkout-form .form .summary .price-mask .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  opacity: 1;
+}
+
+.container
+  .checkout-page
+  .checkout-form
+  .form
+  .summary
+  .price-mask
+  .grand-price {
+  color: #d87d4a;
+}
+
+.container .checkout-page .checkout-form .form .summary .pay {
+  width: 100%;
+  height: 48px;
+  background: #d87d4a;
+  color: #ffffff;
+}
+
+.footer {
+  width: 100%;
+  padding: 50px 1.5rem;
+  display: grid;
+  grid-template-areas:
+    "logo"
+    "nav"
+    "text"
+    "copyright"
+    "social-icons";
+  justify-items: center;
+  position: relative;
+  background: #101010;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer {
+    padding: 60px 2.5rem 46px 2.5rem;
+    grid-template-areas:
+      "logo logo"
+      "nav nav"
+      "text text"
+      "copyright social-icons";
+    justify-items: flex-start;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .footer {
+    padding: 75px 165px 48px 165px;
+    grid-template-areas:
+      "logo nav"
+      "text social-icons"
+      "copyright copyright";
+  }
+}
+
+.footer .rect {
+  position: absolute;
+  width: 100px;
+  height: 5px;
+  background: #d87d4a;
+  top: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer .rect {
+    left: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .footer .rect {
+    left: 165px;
+  }
+}
+
+.footer .logo {
+  grid-area: logo;
+}
+
+.footer .nav-links {
+  grid-area: nav;
+}
+
+@media only screen and (min-width: 1280px) {
+  .footer .nav-links {
+    justify-self: flex-end;
+  }
+}
+
+.footer .nav-links .nav {
+  margin: 0;
+  padding: 20px 0 30px 0;
+}
+
+@media only screen and (min-width: 1280px) {
+  .footer .nav-links .nav {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer .nav-links .nav {
+    width: 429px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer .nav-links .nav li {
+  list-style-type: none;
+  padding: 10px 0;
+  text-align: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 1280px) {
+  .footer .nav-links .nav li {
+    padding: 0;
+  }
+}
+
+.footer .description {
+  grid-area: text;
+}
+
+.footer .description .description-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  margin: 0;
+  padding: 0 0 40px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer .description .description-text {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .footer .description .description-text {
+    width: 540px;
+    padding: 0;
+    margin: 36px 0 0 0;
+  }
+}
+
+.footer .copyright {
+  grid-area: copyright;
+  padding: 0 0 40px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer .copyright {
+    padding: 0;
+    margin: 80px 0 0 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .footer .copyright {
+    margin: 56px 0 0 0;
+  }
+}
+
+.footer .copyright p {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 25px;
+  margin: 0;
+}
+
+.footer .social-icons {
+  grid-area: social-icons;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer .social-icons {
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin: 80px 0 0 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .footer .social-icons {
+    margin: 0;
+  }
+}
+
+.footer .social-icons img {
+  margin: 0 0 0 10px;
+  cursor: pointer;
+}

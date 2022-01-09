@@ -1,0 +1,14 @@
+[
+	{
+		"username": "Johndoe",
+		"passwordHash": "$2a$10$UZeI3PIGKNjMr.VSqW7SUO0cGVU93GbTGAZfWxxUCWrhZSgwmREjO"
+	},
+	{
+		"username": "Marycane",
+		"passwordHash": "$2a$10$UZeI3PIGKNjMr.VSqW7SUO0cGVU93GbTGAZfWxxUCWrhZSgwmREjO"
+	},
+	{
+		"username": "Janedoe",
+		"passwordHash": "$2a$10$UZeI3PIGKNjMr.VSqW7SUO0cGVU93GbTGAZfWxxUCWrhZSgwmREjO"
+	}
+]
