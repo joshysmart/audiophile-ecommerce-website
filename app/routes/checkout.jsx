@@ -166,16 +166,16 @@ function Checkout() {
               <p className="orange-text">Billing details</p>
               <div className="billing-details">
                 <div className="input-wrapper">
-                  <label htmlFor="name">Name</label>
                   <input type="text" name="name" id="name" placeholder="Alexei Ward" required />
+                  <label htmlFor="name">Name</label>
                 </div>
                 <div className="input-wrapper">
-                  <label htmlFor="email">Email Address</label>
                   <input type="email" name="email" id="email" placeholder="alexei@mail.com" required />
+                  <label htmlFor="email">Email Address</label>
                 </div>
                 <div className="input-wrapper">
-                  <label htmlFor="tel">Phone number</label>
                   <input type={"tel"} name="tel" id="tel" placeholder="+1 202-555-0136" required />              
+                  <label htmlFor="tel">Phone number</label>
                 </div>
               </div>
             </div>
@@ -184,23 +184,23 @@ function Checkout() {
               <p className="orange-text">Shipping info</p>
               <div className="shipping-info">
                 <div className="input-wrapper address">
-                  <label htmlFor="address">Address</label>
                   <input type="text" name="address" id="address" placeholder="1137 Williams Avenue" required />
+                  <label htmlFor="address">Address</label>
                 </div>
 
                 <div className="input-wrapper">
-                  <label htmlFor="zip-code">Zip code</label>
                   <input type="text" name="zip-code" id="zip-code" placeholder="10001" pattern="[0-9]{5}" title="Five digit zip code" required />
+                  <label htmlFor="zip-code">Zip code</label>
                 </div>
 
                 <div className="input-wrapper">
-                  <label htmlFor="city">City</label>
                   <input type="text" name="city" id="city" placeholder="New York" required />
+                  <label htmlFor="city">City</label>
                 </div>
 
                 <div className="input-wrapper">
-                  <label htmlFor="country">Country</label>
                   <input type="text" name="country" id="country" placeholder="New York" required />
+                  <label htmlFor="country">Country</label>
                 </div>
               </div>
             </div>
@@ -235,13 +235,13 @@ function Checkout() {
                 :
                 <div className="payment-method-mask">
                   <div className="input-wrapper">
-                    <label htmlFor="e-money-number">e-Money Number</label>
                     <input type="text" name="e-money-number" id="e-money-number" placeholder="238521993" pattern="[0-9]{9}" title="Nine digit e-money number" required />
+                    <label htmlFor="e-money-number">e-Money Number</label>
                   </div>
                 
                   <div className="input-wrapper">
-                    <label htmlFor="e-money-pin">e-Money PIN</label>
                     <input type="text" name="e-money-pin" id="e-money-pin" placeholder="6891" pattern="[0-9]{4}" title="Four digit e-money pin" required />
+                    <label htmlFor="e-money-pin">e-Money PIN</label>
                   </div>
                 </div>
               }
