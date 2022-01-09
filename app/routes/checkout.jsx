@@ -70,7 +70,7 @@ export const loader = async ({request, params}) => {
   const total = data?.map(product => product?.product?.price)
   .reduce((a, b) => a + b, 0)
   const shipping = (Math.ceil(Math.random() * 11) + 1) * 10
-  const vat = Math.ceil(total / 7.5)
+  const vat = Math.ceil(total * (7.5 / 100))
   const grandTotal = total + shipping + vat
 
   // console.log(data)
