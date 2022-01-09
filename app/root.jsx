@@ -193,6 +193,7 @@ function Layout({children}) {
             </div>
           </ul>
           <div className="cart">
+            <span className="count">{products.length > 0 && products.length}</span>
             {/* <Link to={"/cart"} target={"_self"}> */}
             <button className="cart-btn" onClick={handleClick} data-clicked={"cart-btn"}>
               <img src="../assets/shared/desktop/icon-cart.svg" alt=""/>

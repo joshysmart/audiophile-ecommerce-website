@@ -236,14 +236,33 @@ button {
   }
 }
 
-.header .navbar button {
+.header .navbar .cart {
+  position: relative;
+}
+
+.header .navbar .cart .count {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: #d87d4a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 12px;
+}
+
+.header .navbar .cart button {
   background: 0;
   border: 0;
   outline: 0;
 }
 
 @media only screen and (min-width: 1280px) {
-  .header .navbar button {
+  .header .navbar .cart button {
     color: #fff;
   }
 }
