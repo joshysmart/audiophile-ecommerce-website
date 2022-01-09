@@ -46,7 +46,7 @@ button {
   padding: 1.5rem;
   position: absolute;
   top: 0;
-  z-index: 2;
+  z-index: 3;
 }
 
 @media only screen and (min-width: 768px) {
@@ -279,6 +279,7 @@ button {
   background: #00000033;
   mix-blend-mode: normal;
   transition: all 0.4s ease-in;
+  z-index: 2;
 }
 
 .open-checkout-overlay::before {
@@ -290,7 +291,7 @@ button {
   background: #00000033;
   mix-blend-mode: normal;
   transition: all 0.4s ease-in;
-  z-index: 1;
+  z-index: 3;
 }
 
 .container .login-register {
@@ -2845,6 +2846,7 @@ input::-webkit-inner-spin-button {
 
 .container .checkout-page {
   padding: 0 1.5rem;
+  position: relative;
 }
 
 @media only screen and (min-width: 768px) {
@@ -2878,7 +2880,7 @@ input::-webkit-inner-spin-button {
   position: absolute;
   width: 100%;
   margin: 55px 0;
-  z-index: 2;
+  z-index: 3;
   color: #000000;
   transform: translate(-1500px);
 }
