@@ -1790,7 +1790,7 @@ input::-webkit-inner-spin-button {
 }
 
 .container .product-details .product .image {
-  width: 327px;
+  width: 100%;
   height: 327px;
   background-size: cover;
   background-repeat: no-repeat;
