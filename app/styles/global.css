@@ -1328,7 +1328,7 @@ input::-webkit-inner-spin-button {
   height: 300px;
   background-image: url("/assets/shared/mobile/image-best-gear.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 @media only screen and (min-width: 768px) {
@@ -2727,7 +2727,7 @@ input::-webkit-inner-spin-button {
 }
 
 .container .product-details .you-may-like .products .other-product {
-  width: 327px;
+  width: 100%;
   height: 265px;
   display: flex;
   flex-direction: column;
