@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider        = "prisma-client-js"
   previewFeatures = ["mongoDb"]
@@ -12,7 +9,7 @@ datasource db {
 }
 
 model Product {
-  id          String   @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
   slug        String   @unique
   name        String
   shortName   String
@@ -30,7 +27,7 @@ model Product {
 }
 
 model CartItem {
-  id        String   @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
   userId    String   @db.ObjectId
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   product   Json
@@ -40,15 +37,15 @@ model CartItem {
 }
 
 model ShoppingSession {
-  id        String   @id @default(dbgenerated()) @map("_id") @db.ObjectId
-  userId    String   @unique @db.ObjectId
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
   total     Int
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
 model User {
-  id           String     @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  id           String     @id @default(auto()) @map("_id") @db.ObjectId
   username     String     @unique
   passwordHash String
   cartItems    CartItem[]
@@ -57,25 +54,25 @@ model User {
 }
 
 model OrderDetails {
-  id        String   @id @default(dbgenerated()) @map("_id") @db.ObjectId
-  userId    String   @unique @default(dbgenerated()) @db.ObjectId
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
   total     Int
-  paymentId String   @default(dbgenerated()) @db.ObjectId
+  paymentId String   @db.ObjectId
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
 model OrderItems {
-  id        String   @id @default(dbgenerated()) @map("_id") @db.ObjectId
-  orderId   String   @default(dbgenerated()) @db.ObjectId
-  productId String   @unique @default(dbgenerated()) @db.ObjectId
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  orderId   String   @db.ObjectId
+  productId String   @db.ObjectId
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
 model PaymentDetails {
-  id        String   @id @default(dbgenerated()) @map("_id") @db.ObjectId
-  orderId   String   @unique @default(dbgenerated()) @db.ObjectId
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  orderId   String   @db.ObjectId
   amount    Int
   provider  String
   status    String

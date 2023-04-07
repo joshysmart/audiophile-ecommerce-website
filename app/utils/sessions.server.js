@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 import { db } from "./db.server"
-import { createCookieSessionStorage, redirect } from "remix";
+import { createCookieSessionStorage, redirect } from "@remix-run/node";
 
 // login user
 export async function login({ username, password }) {
